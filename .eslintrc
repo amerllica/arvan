@@ -1,0 +1,77 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "prettier",
+    "sort-imports-es6-autofix",
+    "sort-keys-fix",
+    "react-hooks"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "./src"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      },
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "globals": {
+    "GLOBAL": true
+  },
+  "rules": {
+    "sort-keys-fix/sort-keys-fix": "error",
+    "global-require": "off",
+    "no-use-before-define": "off",
+    "no-console": "off",
+    "import/no-unresolved": "off",
+    "no-underscore-dangle": "off",
+    "function-paren-newline": "off",
+    "quotes": ["error", "single"],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".tsx", ".jsx"]
+      }
+    ],
+    "import/no-cycle": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "specialLink": ["to"]
+      }
+    ],
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  }
+}

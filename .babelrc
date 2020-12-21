@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "@babel/react",
+    "@babel/preset-env"
+  ],
+  "env": {
+    "development" : {
+      "compact": false
+    },
+    "production": {
+      "plugins": [
+        "transform-remove-console",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
